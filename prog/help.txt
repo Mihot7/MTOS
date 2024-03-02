@@ -1,0 +1,16 @@
+Orginalne pakiety:
+----------------------------------------------------------------------------------------
+clear            Czyści ekran.
+info             Informatcje o MTOS.
+kalkulator       No, kalkulator?
+music            Mihot music (ported) 
+mycitynew        Stwórz swoje miasto, baw sie do woli! (v1.9.9 made by toffix) (ported)
+mycityold        Stwórz swoje miasto, baw sie do woli! (Legacy) (ported)
+mycity           Stwórz swoje miasto, baw sie do woli! (RemasterLegacy) (ported)
+reboot           Uruchamia ponownie MTOS.
+vt               VirusTest fake wirusy do testu. (ported)
+exit             Wyłącza system
+installer        Instalator pakietów (beta)
+theme            Zmień kolor swojego systemu!
+-----------------------------------------------------------------------------------------
+Zainstalowane pakiety osób trzecich:
