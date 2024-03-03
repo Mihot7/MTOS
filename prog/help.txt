@@ -12,5 +12,9 @@ vt               VirusTest fake wirusy do testu. (ported)
 exit             Wyłącza system
 installer        Instalator pakietów (beta)
 theme            Zmień kolor swojego systemu!
+clock            Pokazuje date i godzine.
+repo             Otwiera repo w przeglądarce.
+discord          Zaproszenie na server discord
 -----------------------------------------------------------------------------------------
 Zainstalowane pakiety osób trzecich:
+

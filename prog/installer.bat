@@ -4,7 +4,6 @@ echo Podaj scieszke folderu "<nazwa_programu>_setup" (albo drag'n'drop)
 set /p installerdir=DIR:
 cd %installerdir%
 call installer.bat
-echo POMYŚLNIE? ZAINSTALOWANO: %pkgname%!
 pause
 cd %cel%
 set prog=1

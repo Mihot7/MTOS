@@ -15,9 +15,9 @@ cls
 echo.
 echo MTOS %ver% Boot Manager
 timeout /t 2 /nobreak >nul
+echo Booting MTOS...
 cd system
 call PlaySound "sounds\startup.wav"
 cd ..
-echo Booting MTOS...
 timeout /t 5 /nobreak >nul
 sys
