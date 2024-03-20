@@ -1,6 +1,6 @@
 :sh
 set prog=0
-set template=2Shell command:
+set template=Tryb_awaryjny:
 set /p "cmd=%template% "
 
 if not exist "%cmd%.bat" (

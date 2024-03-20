@@ -15,6 +15,9 @@ theme            Zmień kolor swojego systemu!
 clock            Pokazuje date i godzine.
 repo             Otwiera repo w przeglądarce.
 discord          Zaproszenie na server discord
+2shell           Awaryjny shell na wypadek uszkodzenia głównego.
+mihot31        Tryb kompatybilności z Mihot 3.1
 -----------------------------------------------------------------------------------------
 Zainstalowane pakiety osób trzecich:
+
 
