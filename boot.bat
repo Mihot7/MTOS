@@ -18,6 +18,7 @@ timeout /t 5 /nobreak >nul
 cd system
 call PlaySound "sounds\startup.wav"
 cd ..
+cd prog
 if exist %shell%.bat (
     goto normal_boot
 ) else (
@@ -25,6 +26,7 @@ if exist %shell%.bat (
 )
 
 :normal_boot
+cd..
 sys
 
 :safe_boot
@@ -34,4 +36,6 @@ timeout /t 2 /nobreak >nul
 echo Pobieranie pliku repair.bat (na wypadek jego uszkodzenia)
 del repair.bat /q
 curl https://raw.githubusercontent.com/Mihot7/MTOS/main/prog/repair.bat --silent --output repair.bat
+timeout /t 2 /nobreak >nul
+cd..
 call sys.bat
