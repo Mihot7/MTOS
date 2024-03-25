@@ -24,10 +24,11 @@ curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/Viru
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/repair.cmd --silent --output repair.cmd
 echo System NAPRAWIONY!
 echo Exit or reboot?
-set /p choose=[y/n]: 
-if %choose%==y reboot
-if %choose%==n goto exit
+set /p choose=[reboot/exit]: 
+if %choose%==reboot reboot
+if %choose%==exit goto exit
 
 :exit
+set shell=MTOS_SHELL
 set prog=1
 %shell%
