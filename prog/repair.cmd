@@ -21,7 +21,12 @@ curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/repo
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/theme.bat --silent --output theme.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/uninstaller.bat --silent --output uninstaller.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/Virustest.bat --silent --output Virustest.bat
-curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/repair.cmd --silent --output repair.cmd
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/convert.bat --silent --output convert.bat
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/downloader.bat --silent --output downloader.bat
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/filemanager.bat --silent --output filemanager.bat
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/legacyinstaller.bat --silent --output legacyinstaller.bat
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/txtview.bat --silent --output txtview.bat
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/welcome.bat --silent --output welcome.bat
 echo System NAPRAWIONY!
 echo Exit or reboot?
 set /p choose=[reboot/exit]: 

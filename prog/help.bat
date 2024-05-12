@@ -1,5 +1,5 @@
-echo Type commands without .bat!
-dir *.bat /b
+echo Lista zainstalowanych Programów:
+for %%a in (*.bat) do @echo %%~na
 echo.
 echo.
 set prog=1

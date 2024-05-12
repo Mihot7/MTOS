@@ -1,5 +1,3 @@
-@echo off
-
 cd ..
 cd system
 chcp 65001
@@ -11,13 +9,13 @@ echo ──────────────────┘
 echo.
 echo 1) Odtwórz plik
 echo 2) Zatrzymaj muzyke
-echo 3) ???
+echo 3) Info
 echo 4) KONIEC
 echo.
 set /p opcja=wybierz:
 if %opcja%==1 goto play
 if %opcja%==2 goto stop
-if %opcja%==3 goto ???
+if %opcja%==3 goto Info
 if %opcja%==4 goto exit
 goto zly_wybor
 
@@ -34,51 +32,42 @@ echo ──────────────────┘
 echo.
 echo.
 echo.
-set/p x=lokalizacja (bez cudzysłowów, program automatycznie da): 
+echo Wybierz plik którego chcesz odsłuchać:
+cd ..
+cd user_files
 echo.
+for %%a in (*.wav) do @echo %%~na
 echo.
+cd ..
+cd system
+echo Nie widzisz swojego pliku? Pamiętaj, przekonwertuj go zapomocą polecenia convert!
+set /p x=Nazwa: 
 echo.
-echo.
-echo.                         ┌████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │█████ ODTWARZANIE MUZYKI ███████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         └───────────────────────────────┘
-start silent PlaySound "%x%"
+cls
+type playing.txt
+start silent.bat PlaySound.bat "%userfolder%\%x%.wav"
 pause
 goto poczatek
 
 :stop
 cls
 taskkill /f /im wscript.exe
-echo.
-echo.
-echo.
-echo.
-echo.                         ┌████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │█████ ZATRZYMANO MUZYKE  ███████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         │████████████████████████████████
-echo.                         └───────────────────────────────┘
+cls
+type stop.txt
 pause
 goto poczatek
 
-:???
+:info
 cls
-echo SIEMA, %username%!!!!!
+echo Mihot MUSIC v2.1
+echo 2021-2024 Mihot7 i NotAdidel
+echo Using NotAdidel's PlaySound lib.
+echo Original version made by NotAdidel for Mihot 5.0
 pause
 goto poczatek
 
 :exit
+cd ..
+cd prog
 set prog=1
 %shell%
