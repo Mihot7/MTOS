@@ -1,5 +1,10 @@
 cd ..
 cd user_files
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo MTOS DOWNLOADER   │
+echo ──────────────────┘
 :menu
 echo Witaj w narzędziu pobierania systemu MTOS.
 echo 1. Pobierz

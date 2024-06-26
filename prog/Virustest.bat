@@ -1,8 +1,12 @@
 @echo off
-
-echo ####################
-echo # Baw sie Virusami #
-echo ####################
+rem     │     ─   └    ┘    ┌    ┐    ┤    ├    ┼    ┴    ┬
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo Virus TEST        │
+echo ──────────────────┘
+cd ..
+cd system
 
 :s
 color 07
@@ -83,5 +87,9 @@ cls
 goto s
 
 :f
+cd ..
+cd prog
+color %color%
+echo Back to MTOS.
 set prog=1
 %shell%

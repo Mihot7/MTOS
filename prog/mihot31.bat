@@ -2,7 +2,11 @@
 color 07
 set lang=pl_PL
 goto boot
-
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo MIHOT3.1 MODE     │
+echo ──────────────────┘
 :boot
 cls
 color 07

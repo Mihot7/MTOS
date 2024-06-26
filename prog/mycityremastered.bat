@@ -1,6 +1,9 @@
 @echo off
-echo Ported to MTOS by Mihot7
-echo.
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo MyCity Remaster   │
+echo ──────────────────┘
 echo -----------------------------------
 echo ----------Witaj w Grze ------------
 echo -----------------------------------

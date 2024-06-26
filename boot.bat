@@ -1,4 +1,5 @@
 @echo off
+rem     │     ─   └    ┘    ┌    ┐    ┤    ├    ┼    ┴    ┬
 set shell=MTOS_SHELL
 chcp 65001
 cd system
@@ -20,7 +21,7 @@ echo.
 echo Booting MTOS...
 timeout /t 5 /nobreak >nul
 cd system
-call PlaySound "sounds\startup.wav"
+call bPlaySound "sounds\startup.wav"
 cd ..
 cd prog
 if exist %shell%.bat (
@@ -64,17 +65,16 @@ cls
 goto choosenet1
 
 :net_boot
-if %build%==alpha echo WERSJA ALPHA NIE WSPIERA POLECENIA REPAIR && goto erro05
-if %build%==beta echo WERSJA BETA NIE WSPIERA POLECENIA REPAIR && goto error05
-if %build%==unofficial echo Wersja nieoficjalna. Kontynuacja nie wskazana.
+if %build%==alpha echo Wykryto wersje alpha która, nie posiada serwerów z plikami. && goto erro05
+if %build%==beta echo WWykryto wersje beta która, nie posiada serwerów z plikami. && goto error05
+if %build%==unofficial echo Wersja nieoficjalna. Kontynuacja nie dozwolona. && goto error05
 timeout /t 2 /nobreak >nul
-echo Pobieranie plików 2shell, help.bat, repair.bat oraz repair.cmd (na wypadek ich uszkodzenia)
+echo Pobieranie plików 2shell, help.bat oraz repair.bat (na wypadek ich uszkodzenia)
 del repair.bat /q>nul
 del repair.cmd /q>nul
 del safe_shell.bat /q>nul
 del help.bat /q>nul
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/repair.bat --silent --output repair.bat
-curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/repair.cmd --silent --output repair.cmd
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/help.bat --silent --output help.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/2shell.bat --silent --output safe_shell.bat
 timeout /t 2 /nobreak >nul
@@ -101,6 +101,16 @@ timeout /t 5 /nobreak >nul
 exit
 
 :shutdown
+echo shutting down!
+timeout /t 5 /nobreak >nul
+exit
+
+:error05
+cd system
+type error.txt
+cd ..
+Echo ERROR! (E05)
+pause
 echo shutting down!
 timeout /t 5 /nobreak >nul
 exit

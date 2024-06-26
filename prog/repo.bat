@@ -1,4 +1,9 @@
-echo Witaj w repo!
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo MTOS REPO         │
+echo ──────────────────┘
+cho Witaj w repo!
 Echo Sprawdzanie połączenia internetowego...
 Ping www.google.com -n 1 -w 1000
 cls

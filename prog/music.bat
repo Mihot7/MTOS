@@ -1,10 +1,12 @@
 cd ..
 cd system
 chcp 65001
-
 :poczatek
 cls
-echo MIHOT MUSIC       │
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo Mihot Music       │
 echo ──────────────────┘
 echo.
 echo 1) Odtwórz plik

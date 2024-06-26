@@ -1,7 +1,7 @@
 cls
 cd ..
 cd system
-start silent.bat PlaySound.bat "%userfolder%\title.wav"
+start PlaySound.bat "%userfolder%\title.wav"
 type logo.txt
 cd ..
 cd prog
@@ -30,8 +30,7 @@ echo Mihot7 - Główny developer, NotAdidel - biblioteki dzwięku, wysyłania kl
 echo Toffix - Gry z serii MyCity, PseudoStudios - OldMihotOS Core.
 echo.
 echo. Dzięki za pobranie!
-echo Czekanie aż skończy sie muzyka...
-timeout /t 101 /nobreak>nul
+taskkill /f /im wscript.exe
 pause
 set prog=1
 %shell%

@@ -1,4 +1,9 @@
 @echo off
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo File Manager      │
+echo ──────────────────┘
 cd ..
 cd user_files
 :main_menu

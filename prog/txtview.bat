@@ -1,3 +1,8 @@
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo TXT VIEVER        │
+echo ──────────────────┘
 cd ..
 cd user_files
 Echo Wybierz plik do wyswietlenia:

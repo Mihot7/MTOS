@@ -1,3 +1,9 @@
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo UNINSTALLER       │
+echo ──────────────────┘
+rem     │     ─   └    ┘    ┌    ┐    ┤    ├    ┼    ┴    ┬
 :start
 set syspkgdel=0
 echo Witaj w uninstaller! (Version 2.0)
@@ -22,16 +28,22 @@ if exist %rmpkg%.bat (
 )
 
 :warning
+cls
 echo Uwaga, ten pakiet jest plikiem WYMAGANYM do uruchomienia systemu. CZY NAPEWNO CHCESZ GO USUNĄĆ?
 set /p choose=[y/n]: 
 if %choose%==y set syspkgdel=1 && goto uninstall
 if %choose%==n goto exit
+echo invalid choose.
+goto warning
 
 :warning2
+cls
 echo Uwaga, UWAGA USUWASZ WSZYSTKIE PAKIETY! SPOWODUJE TO USZKODZENIE SYSTEMU I KONIECZNOŚĆ JEGO NAPRAWY! CZY NAPEWNO CHCESZ JE USUNĄĆ?
 set /p choose=[y/n]: 
 if %choose%==y set syspkgdel=1 && goto uninstall
 if %choose%==n goto exit
+echo invalid choose.
+goto warning2
 
 :uninstall
 del %rmpkg%.bat /q
@@ -40,6 +52,6 @@ pause
 goto exit
 
 :exit
-if %syspkgdel%==1 echo ERROR! (03) && pause && reboot
+if %syspkgdel%==1 echo ERROR! (03) && pause
 set prog=1
 %shell%

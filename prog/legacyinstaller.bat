@@ -1,3 +1,8 @@
+echo ───────────────────────────┐
+echo Godzina: %time%
+echo ──────────────────┬────────┘
+echo Legacy installer  │
+echo ──────────────────┘
 set cel=%cd%
 echo Witaj w legacy instalatorze! (Version 2.0)
 echo 1. Legacy mode
