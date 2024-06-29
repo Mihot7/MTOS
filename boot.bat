@@ -7,10 +7,15 @@ call SendKey "{f11}"
 set SYSTEM_FOLDER=%cd%
 cd ..
 title MTOS
+set plugins=0
+set mihot-lib_loaded=false
+set config=false
+set cdprog=false
 set /p ver=<"config/ver"
 set /p color=<"config/color"
 set /p boot=<"config/boot"
 set /p build=<"config/build"
+set /p builder=<"config/builder"
 color %color%
 set prog=0
 cd user_files
@@ -19,9 +24,11 @@ cd ..
 cls
 echo.
 echo Booting MTOS...
-timeout /t 5 /nobreak >nul
-cd system
-call bPlaySound "sounds\startup.wav"
+timeout /t 2 /nobreak>nul
+cd plugins
+echo Loading plugins...
+for %%G in (*.bat) do call "%%G" && set /a plugins=plugins+1
+timeout /t 2 /nobreak>nul
 cd ..
 cd prog
 if exist %shell%.bat (

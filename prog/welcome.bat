@@ -1,7 +1,11 @@
 cls
 cd ..
 cd system
-start PlaySound.bat "%userfolder%\title.wav"
+if exist "%userfolder%\title.wav" (
+    start PlaySound.bat "%userfolder%\title.wav"
+) else (
+    echo Plik title.wav został usunięty przez użytkownika.
+)
 type logo.txt
 cd ..
 cd prog
@@ -30,7 +34,7 @@ echo Mihot7 - Główny developer, NotAdidel - biblioteki dzwięku, wysyłania kl
 echo Toffix - Gry z serii MyCity, PseudoStudios - OldMihotOS Core.
 echo.
 echo. Dzięki za pobranie!
-taskkill /f /im wscript.exe
 pause
+taskkill /f /im wscript.exe
 set prog=1
 %shell%

@@ -1,8 +1,8 @@
 echo -- OS info --
 echo MTOS version: %ver%
-echo KERNEL: 7.05
-echo MihotOS compatibility version: 14b3
 echo Build type: %build%
+if %build%==unofficial echo Unofficial build maker: %builder%
 echo Shell: %shell%
+echo Plugins loaded: %plugins%
 set prog=1
 %shell%

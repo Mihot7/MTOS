@@ -20,7 +20,7 @@ if %you%==1 goto 0
 if %you%==2 goto 2
 if %you%==3 goto 1
 if %you%==4 goto help
-if %you%==5 set prog=1 && %shell%
+if %you%==5 goto exit
 
 
 cls
@@ -56,7 +56,7 @@ echo Nie używaj tych znaków"   > < |   "  oraz spacji MTOS sie zesra jak ich u
 echo.
 type %name%
 set /p content=">"
-if %content%==qa goto options
+if /I "%content%"=="qa" goto options
 echo %content%>>%name%
 cls
 echo Linia dodana!
@@ -89,3 +89,7 @@ echo Pamiętaj folder\plik.txt
 set /p edit=">"
 edit %edit%
 goto options
+
+:exit
+set prog=1
+%shell%
