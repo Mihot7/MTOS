@@ -8,7 +8,6 @@ set SYSTEM_FOLDER=%cd%
 cd ..
 title MTOS
 set plugins=0
-set mihot-lib_loaded=false
 set config=false
 set cdprog=false
 set /p ver=<"config/ver"
@@ -24,6 +23,10 @@ cd ..
 cls
 echo.
 echo Booting MTOS...
+if [%1]==[] goto boot
+if /I %1==/safe goto safe_boot
+
+:boot
 timeout /t 2 /nobreak>nul
 cd plugins
 echo Loading plugins...
@@ -50,11 +53,11 @@ timeout /t 5 /nobreak >nul
 exit
 
 :safe_boot
+cd prog
 set shell=safe_shell
 echo UWAGA, SYSTEM USZKODZONY! WCHODZENIE W TRYB AWARYJNY. 
 Echo Sprawdzanie połączenia internetowego...
-Ping www.google.com -n 1 -w 1000
-cls
+Ping www.google.com -n 1 -w 1000>nul
 if errorlevel 1 (echo Brak połączenia internetowego! && goto choosenet1) else (echo Jesteś połączony z internetem! && goto net_boot)
 
 :choosenet1
@@ -73,7 +76,7 @@ goto choosenet1
 
 :net_boot
 if %build%==alpha echo Wykryto wersje alpha która, nie posiada serwerów z plikami. && goto erro05
-if %build%==beta echo WWykryto wersje beta która, nie posiada serwerów z plikami. && goto error05
+if %build%==beta echo Wykryto wersje beta która, nie posiada serwerów z plikami. && goto error05
 if %build%==unofficial echo Wersja nieoficjalna. Kontynuacja nie dozwolona. && goto error05
 timeout /t 2 /nobreak >nul
 echo Pobieranie plików 2shell, help.bat oraz repair.bat (na wypadek ich uszkodzenia)
