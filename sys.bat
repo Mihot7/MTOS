@@ -15,8 +15,19 @@ cd config
 echo false>boot
 cd ..
 
-:sh
 cd prog
+if exist %shell%.bat (
+    goto sh
+) else (
+    goto error
+)
+
+
+:sh
 echo.
 echo.
 %shell%
+
+:error
+set errorcode=SHELL_FAIL
+%error%

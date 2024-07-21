@@ -47,6 +47,7 @@ curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/file
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/legacyinstaller.bat --silent --output legacyinstaller.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/txtview.bat --silent --output txtview.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/welcome.bat --silent --output welcome.bat
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/errormania.bat --silent --output errormania.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/notepad.bat --silent --output notepad.bat
 echo System NAPRAWIONY!
 echo Exit or reboot?

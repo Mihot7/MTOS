@@ -1,10 +1,13 @@
 @echo off
 rem     │     ─   └    ┘    ┌    ┐    ┤    ├    ┼    ┴    ┬
+set kernel=sys
 set shell=MTOS_SHELL
 chcp 65001
 cd system
 call SendKey "{f11}"
 set SYSTEM_FOLDER=%cd%
+set crash="%SYSTEM_FOLDER%\crash.bat"
+set bootfile="%SYSTEM_FOLDER%\boot.bat"
 cd ..
 title MTOS
 set plugins=0
@@ -42,15 +45,9 @@ if exist %shell%.bat (
 
 :normal_boot
 cd..
-sys
-cd system
-type error.txt
-cd ..
-Echo ERROR! (E02)
-pause
-echo shutting down!
-timeout /t 5 /nobreak >nul
-exit
+%kernel%
+set errorcode=KERNEL_ERROR
+%crash%
 
 :safe_boot
 cd prog
@@ -81,7 +78,6 @@ if %build%==unofficial echo Wersja nieoficjalna. Kontynuacja nie dozwolona. && g
 timeout /t 2 /nobreak >nul
 echo Pobieranie plików 2shell, help.bat oraz repair.bat (na wypadek ich uszkodzenia)
 del repair.bat /q>nul
-del repair.cmd /q>nul
 del safe_shell.bat /q>nul
 del help.bat /q>nul
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/repair.bat --silent --output repair.bat
@@ -89,38 +85,16 @@ curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/help
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/2shell.bat --silent --output safe_shell.bat
 timeout /t 2 /nobreak >nul
 cd..
-call sys.bat
-cd system
-type error.txt
-cd ..
-Echo ERROR! (E04)
-pause
-echo shutting down!
-timeout /t 5 /nobreak >nul
-exit
+%kernel%
+set errorcode=KERNEL_ERROR
+%error%
 
 :no_net_boot
-call sys.bat
-cd system
-type error.txt
-cd ..
-echo ERROR! (E01)
-pause
-echo shutting down!
-timeout /t 5 /nobreak >nul
-exit
+%kernel%
+set errorcode=KERNEL_ERROR
+%error%
 
 :shutdown
-echo shutting down!
-timeout /t 5 /nobreak >nul
-exit
-
-:error05
-cd system
-type error.txt
-cd ..
-Echo ERROR! (E05)
-pause
 echo shutting down!
 timeout /t 5 /nobreak >nul
 exit

@@ -52,6 +52,6 @@ pause
 goto exit
 
 :exit
-if %syspkgdel%==1 echo ERROR! (03) && pause
+if %syspkgdel%==1 set errorcode=CRITAL_FILE_DELETED && %error%
 set prog=1
 %shell%
