@@ -18,6 +18,7 @@ set /p color=<"config/color"
 set /p boot=<"config/boot"
 set /p build=<"config/build"
 set /p builder=<"config/builder"
+set /p edition=<"config/edition"
 color %color%
 set prog=0
 cd user_files
@@ -30,11 +31,11 @@ if [%1]==[] goto boot
 if /I %1==/safe goto safe_boot
 
 :boot
-timeout /t 2 /nobreak>nul
+timeout /t 1 /nobreak>nul
 cd plugins
 echo Loading plugins...
 for %%G in (*.bat) do call "%%G" && set /a plugins=plugins+1
-timeout /t 2 /nobreak>nul
+timeout /t 1 /nobreak>nul
 cd ..
 cd prog
 if exist %shell%.bat (
@@ -72,9 +73,9 @@ cls
 goto choosenet1
 
 :net_boot
-if %build%==alpha echo Wykryto wersje alpha która, nie posiada serwerów z plikami. && goto erro05
-if %build%==beta echo Wykryto wersje beta która, nie posiada serwerów z plikami. && goto error05
-if %build%==unofficial echo Wersja nieoficjalna. Kontynuacja nie dozwolona. && goto error05
+if %build%==alpha echo Wykryto wersje alpha która, nie posiada serwerów z plikami. && goto crash
+if %build%==beta echo Wykryto wersje beta która, nie posiada serwerów z plikami. && goto crash
+if %build%==unofficial echo Wersja nieoficjalna. Kontynuacja nie dozwolona. && goto crash
 timeout /t 2 /nobreak >nul
 echo Pobieranie plików 2shell, help.bat oraz repair.bat (na wypadek ich uszkodzenia)
 del repair.bat /q>nul
@@ -98,3 +99,7 @@ set errorcode=KERNEL_ERROR
 echo shutting down!
 timeout /t 5 /nobreak >nul
 exit
+
+:crash
+set errorcode=BUILD_ID_IS_NOT_SUPPORTED_BY_SERVER
+%crash%

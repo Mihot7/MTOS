@@ -91,5 +91,7 @@ edit %edit%
 goto options
 
 :exit
+cd ..
+cd prog
 set prog=1
 %shell%

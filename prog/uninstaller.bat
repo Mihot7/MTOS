@@ -49,9 +49,10 @@ goto warning2
 del %rmpkg%.bat /q
 echo PAKIET ODINSTALOWANY POMYŚLNIE!
 pause
-goto exit
+if %syspkgdel%==1 set errorcode=CRITAL_FILE_DELETED && %error%
+set prog=1
+%shell%
 
 :exit
-if %syspkgdel%==1 set errorcode=CRITAL_FILE_DELETED && %error%
 set prog=1
 %shell%
