@@ -21,9 +21,11 @@ set /p builder=<"config/builder"
 set /p edition=<"config/edition"
 color %color%
 set prog=0
+if %edition%==lite goto 2
 cd user_files
 set userfolder=%cd%
 cd ..
+:2
 cls
 echo.
 echo Booting MTOS...

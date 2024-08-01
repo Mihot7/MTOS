@@ -25,7 +25,7 @@ del logo.txt /q
 del playing.txt /q
 del stop.txt /q
 del VBS_MSG.BAT /q
-del PlatSound.bat /q
+del PlaySound.bat /q
 del speak.bat /q
 del Silent.bat /q
 del PlaySound1.txt /q
@@ -36,7 +36,9 @@ cd ..
 rd user_files /s /q
 echo Installing speed kernel...
 del sys.bat /q
+del boot.bat /q
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/speed.bat --silent --output sys.bat
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/LITE_BOOT_V1.bat --silent --output boot.bat
 echo.
 echo Done.
 pause

@@ -19,7 +19,7 @@ Ping www.google.com -n 1 -w 1000>nul
 if errorlevel 1 (echo Brak połączenia internetowego! && goto exit) else (echo Jesteś połączony z internetem! && goto next)
 
 :next
-call next.cmd
+call lite.cmd
 
 
 
