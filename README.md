@@ -1,14 +1,25 @@
-# MTOS
-The successor of Mihot.
+# MTOS - Następca projektu "Mihot"
+> [!CAUTION]
+> Projekt Mihot został zakończony z wydaniem Mihot 14.
 <br>
-Made with much more stable core that is ready for 3th party apps!
+Decyzja o tym padła z 3 powodów:
+- Błędy w kodzie
 <br>
-# ERROR CODES.
-E01 - Error loading "safe_shell.bat" file not found
+- Za dużo rzeczy było hardcodowanych przez co, nie było możliwości dodania innych aplikacji.
 <br>
-E02 - Error booting system in normal mode.
+- Chęć przepisania od nowa.
 <br>
-E03 - Critical PKG is missing.
 <br>
-E04 - Failed to download safe_shell.bat
+## Kody błędu
 <br>
+KERNEL_ERROR - Nie znaleziono pliku "SYS" w głównym katalogu MTOS
+<br>
+SHELL_NOT_FOUND - MTOS znalazł plik sys lecz po jego uruchomieniu nie znalazł pliku MTOS_SHELL
+<br>
+BUILD_ID_IS_NOT_SUPPORTED_BY_SERVER - System jest uszkodzony ale, nie może pobrać plików z serwera aby się, naprawić ponieważ build nie jest oficjalny.
+<br>
+> Kod błędu: BUILD_ID_IS_NOT_SUPPORTED_BY_SERVER  może być spowodowany infekcją malware z rodziny "Cute" proszę, instaluj pluginy z dobrego źródła.
+<br>
+ABY WEJŚĆ W TRYB AWARYJNY WPISZ W CMD BOOT /safe :)
+
+
