@@ -10,7 +10,9 @@ Decyzja o tym padła z 3 powodów:
 - Chęć przepisania od nowa.
 <br>
 <br>
+
 ## Kody błędu
+
 <br>
 KERNEL_ERROR - Nie znaleziono pliku "SYS" w głównym katalogu MTOS
 <br>
