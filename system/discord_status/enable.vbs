@@ -1,0 +1,1 @@
+CreateObject("Wscript.Shell").Run "MTOS_DISCORD_STATUS.EXE",0,True

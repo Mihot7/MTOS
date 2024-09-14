@@ -1,10 +1,12 @@
 @echo off
+echo Booting MTOS...
 rem     │     ─   └    ┘    ┌    ┐    ┤    ├    ┼    ┴    ┬
 set kernel=sys
 set shell=MTOS_SHELL
 chcp 65001
 cd system
 call SendKey "{f11}"
+set BOOTING=true
 set SYSTEM_FOLDER=%cd%
 set crash="%SYSTEM_FOLDER%\crash.bat"
 set bootfile="%SYSTEM_FOLDER%\boot.bat"
@@ -21,14 +23,16 @@ set /p builder=<"config/builder"
 set /p edition=<"config/edition"
 color %color%
 set prog=0
-if %edition%==lite goto 2
 cd user_files
 set userfolder=%cd%
 cd ..
-:2
-cls
+cd "%SYSTEM_FOLDER%\discord_status"
+call discord.bat
+cd ..
+cd ..
+set discord="%SYSTEM_FOLDER%\discord_status\discord.bat"
 echo.
-echo Booting MTOS...
+set booting==false
 if [%1]==[] goto boot
 if /I %1==/safe goto safe_boot
 

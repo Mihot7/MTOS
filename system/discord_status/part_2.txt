@@ -1,0 +1,8 @@
+StartTimestamp=
+EndTimestamp=
+
+[Images]
+LargeImage=logo
+LargeImageTooltip=MTOS - Please try it out!
+SmallImage=
+SmallImageTooltip=

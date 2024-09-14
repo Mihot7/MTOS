@@ -21,6 +21,7 @@ curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/MTOS
 echo Deleting some more files...
 cd ..
 cd system
+rd discord_status /s /q
 del logo.txt /q
 del playing.txt /q
 del stop.txt /q

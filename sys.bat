@@ -8,6 +8,13 @@ cd ..
 echo.
 echo MTOS %ver% %edition%
 echo.
+if %boot%==true goto tip
+goto dalej
+:tip
+echo TIP: Pamiętaj aby zainstalować Visual C++ Redistributable!
+echo TIP2: Aby, nie mieć po wyjściu nadal statusu na discordzie użyj polecenia "poweroff".
+:dalej
+echo.
 echo Type help for commands.
 if %boot%==true echo Cześć, uruchomiłeś program MTOS poraz 1 wpisz polecenie welcome aby uzyskać więcej info. Dzięki za pobranie!
 if %build%==alpha echo Alpha build 

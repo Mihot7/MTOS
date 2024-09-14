@@ -1,5 +1,6 @@
 timeout /t 1 /nobreak >nul
 cls
-timeout /t 5 /nobreak >nul
+taskkill /f /im MTOS_DISCORD_STATUS.EXE
 cd ..
 boot
+exit
