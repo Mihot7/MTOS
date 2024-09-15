@@ -7,6 +7,7 @@ call PlaySound "sounds\startup.wav"
 cd ..
 echo.
 echo MTOS %ver% %edition%
+if %latestver%==error (echo Brak połączenia z serwerem aktualizacji.) else (if not %latestver%==%ver% Echo Twoja wersja MTOS jest przestarzała. Proszę, zaktualizuj do wersji %latestver%!)
 echo.
 if %boot%==true goto tip
 goto dalej

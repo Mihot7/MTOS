@@ -21,6 +21,11 @@ set /p boot=<"config/boot"
 set /p build=<"config/build"
 set /p builder=<"config/builder"
 set /p edition=<"config/edition"
+Echo Sprawdzanie połączenia z serwerem aktualizacji...
+Ping www.github.com -n 1 -w 1000>nul
+if errorlevel 1 (echo Brak połączenia z serwerem! && echo error>latestver) else (echo Sprawdzanie najnowszej wersji... && curl https://raw.githubusercontent.com/Mihot7/MTOS/main/config/ver --output latestver --silent)
+set /p latestver=<"latestver"
+del latestver /q
 color %color%
 set prog=0
 cd user_files

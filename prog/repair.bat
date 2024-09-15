@@ -51,7 +51,7 @@ curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/welc
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/errormania.bat --silent --output errormania.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/notepad.bat --silent --output notepad.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/lite.bat --silent --output lite.bat
-curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/lite.cmd --silent --output lite.cmd
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/LITE.cmd --silent --output LITE.cmd
 echo System NAPRAWIONY!
 echo Exit or reboot?
 set /p choose=[reboot/exit]: 

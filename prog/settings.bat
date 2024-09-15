@@ -42,9 +42,10 @@ set /p choose=Wpisz_nazwe:
 set config=true
 call %choose%.bat
 set cdprog=true
+set config=false
 goto menu
 
 :exit
-if %config%==true cd .. && cd prog
+if %cdprog%==true cd .. && cd prog
 set prog=1
 %shell%

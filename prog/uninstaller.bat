@@ -50,10 +50,9 @@ goto warning2
 del %rmpkg%.bat /q
 echo PAKIET ODINSTALOWANY POMYŚLNIE!
 pause
-set prog=1
-%shell%
-MTOS_SHELL
+goto exit
 
 :exit
+if %syspkgdel%==1 set errorcode=SYSTEM_FILES_NOT_FOUND && call %crash%
 set prog=1
 %shell%
