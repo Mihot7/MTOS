@@ -12,15 +12,9 @@ set crash="%SYSTEM_FOLDER%\crash.bat"
 set bootfile="%SYSTEM_FOLDER%\boot.bat"
 cd ..
 title MTOS
-set plugins=0
-set config=false
-set cdprog=false
-set /p ver=<"config/ver"
-set /p color=<"config/color"
-set /p boot=<"config/boot"
-set /p build=<"config/build"
-set /p builder=<"config/builder"
-set /p edition=<"config/edition"
+echo Loading personal settings...
+call "%SYSTEM_FOLDER%\config.bat"
+
 Echo Sprawdzanie połączenia z serwerem aktualizacji...
 Ping www.github.com -n 1 -w 1000>nul
 if errorlevel 1 (echo Brak połączenia z serwerem! && echo error>latestver) else (echo Sprawdzanie najnowszej wersji... && curl https://raw.githubusercontent.com/Mihot7/MTOS/main/config/ver --output latestver --silent)
@@ -40,6 +34,9 @@ echo.
 set booting==false
 if [%1]==[] goto boot
 if /I %1==/safe goto safe_boot
+if /I %2==/safe goto safe_boot
+if /I %1==/debug set debug=true
+if /I %2==/debug set debug=true
 
 :boot
 timeout /t 1 /nobreak>nul

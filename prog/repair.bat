@@ -50,7 +50,7 @@ curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/txtv
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/welcome.bat --silent --output welcome.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/errormania.bat --silent --output errormania.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/notepad.bat --silent --output notepad.bat
-curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/lite.bat --silent --output lite.bat
+curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/edition_lite.bat --silent --output edition_lite.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/LITE.cmd --silent --output LITE.cmd
 echo System NAPRAWIONY!
 echo Exit or reboot?

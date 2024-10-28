@@ -22,8 +22,6 @@ goto menu
 :color
 Echo Wybierz kolor! (Użyj systemu kolorów cmd, np. 0a. Aby uzyskać więcej informacji wprowadz "?".)
 set /p color=KOLOR:
-del color
-copy clean color
 echo %color%>"color"
 color %color%
 echo Motyw zastosowany!
@@ -41,8 +39,9 @@ for %%a in (*.bat) do @echo %%~na
 set /p choose=Wpisz_nazwe:
 set config=true
 call %choose%.bat
-set cdprog=true
-set config=false
+cd ..
+cd prog
+call reboot.bat
 goto menu
 
 :exit

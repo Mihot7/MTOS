@@ -1,0 +1,10 @@
+set plugins=0
+set config=false
+set cdprog=false
+set debug=true
+set /p ver=<"config/ver"
+set /p color=<"config/color"
+set /p boot=<"config/boot"
+set /p build=<"config/build"
+set /p builder=<"config/builder"
+set /p edition=<"config/edition"
