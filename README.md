@@ -1,6 +1,6 @@
-# MTOS - Następca projektu "Mihot"
+# MTOSLegacy - Następca projektu "Mihot"
 > [!CAUTION]
-> Projekt Mihot został zakończony z wydaniem Mihot 14.
+> To jest stare repozytorium MTOS, zmienie to jak są wydawane nowe wersje, więc razem z tym zmieniam repo. To zostawiam, bo nadal bedę wprowadzał bugfixy
 <br>
 Decyzja o tym padła z 3 powodów:
 - Błędy w kodzie
