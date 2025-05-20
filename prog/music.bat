@@ -19,6 +19,7 @@ if %opcja%==1 goto play
 if %opcja%==2 goto stop
 if %opcja%==3 goto Info
 if %opcja%==4 goto exit
+if %opcja%==kupa goto kupa
 goto zly_wybor
 
 :zly_wybor
@@ -73,3 +74,9 @@ cd ..
 cd prog
 set prog=1
 %shell%
+
+:kupa
+echo Jestem w twojej szafie.
+pause
+set errorcode=SPRAWDŹ_SWOJA_SZAFE
+%crash%

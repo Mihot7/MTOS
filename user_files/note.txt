@@ -4,4 +4,4 @@ Jak chcesz dodać moda to:
 1. Linki do WSZYSTKICH PLIKÓW i nazwy ich w systemie!
 2. Nazwa i opis moda.
 3. Po weryfikacji zupdatuje mihota i dodam twojego moda do repo
-*Nie aktualne jest to plik z Mihot'a X (10.3)* Teraz jest jako sample.
+*Nie aktualne, jest to plik z Mihot'a X (10.3)* Teraz jest jako sample.

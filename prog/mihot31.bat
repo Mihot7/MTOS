@@ -1,4 +1,5 @@
 @echo off
+rem Zastanawiam się nad usunięciem tego polecenia, bo jest to mega wadliwy kod.
 color 07
 set lang=pl_PL
 goto boot

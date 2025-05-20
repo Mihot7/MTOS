@@ -1,3 +1,4 @@
+rem Tak, mega useless, ale no... kompatybilność wsteczna
 echo ───────────────────────────┐
 echo Godzina: %time%
 echo ──────────────────┬────────┘

@@ -1,4 +1,6 @@
 @echo off
+rem PROSZĘ, NIE MÓWICIE, ŻE JESTEM SKIDEM.
+rem TAK TO KOD DAVINCIEGO, ALE POWIEDZCIE TO TOFFIXOWI XDDDD
 echo ───────────────────────────┐
 echo Godzina: %time%
 echo ──────────────────┬────────┘
@@ -161,11 +163,13 @@ echo Zapraszamy do miasta
 ping localhost-n 2 >nul
 pause
 cls
-echo Wlasnie osiagnoles limit mieszkancow twoja gra sie zakonczyla
+echo Wlasnie osiagnąles limit mieszkancow twoja gra sie zakonczyla 
+rem PRZEZ ą nie przez on (Tak, mówię to do mojego kolegi...)
 echo Dziekujemy za gre i zapraszamy do innych
 echo na koniec jeszcze jedno od pracownika
 echo Mam ci cos do powiedzienia zrobilem twoje zadanie
 echo zapraszamy do przejscia gry jeszcze 100 razy dziekujemy!
+rem Tak, śmieszy żart.... Może i w 2020 śmieszył :)
 echo Tworca Chudini2010
 echo naciśnij coś
 pause

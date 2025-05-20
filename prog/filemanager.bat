@@ -1,4 +1,5 @@
 @echo off
+rem Nie wiem jak, ale to jedyny program w MTOS, który pierwszy raz działał bez bug fixów XD
 echo ───────────────────────────┐
 echo Godzina: %time%
 echo ──────────────────┬────────┘
@@ -91,7 +92,7 @@ goto main_menu
 
 :info
 echo MTOS FILE MANAGER v2.0 
-echo Made by Mihot7 2024
+echo Made by Mihot7 2025
 echo MADE ONLY FOR USE WITH MTOS.
 echo I'm not responsible for lost files etc.
 pause

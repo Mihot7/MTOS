@@ -44,6 +44,7 @@ cd prog
 call reboot.bat
 goto menu
 
+rem Czy to linux? Nie. Czy to UNIX? Nie. Czy to DOS? Nie. Czy to gówno? TAK.
 :exit
 if %cdprog%==true cd .. && cd prog
 set prog=1

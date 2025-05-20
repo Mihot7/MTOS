@@ -18,6 +18,9 @@ Ping www.google.com -n 1 -w 1000
 cls
 if errorlevel 1 (goto no_net_exit) else (echo Jesteś połączony z internetem! && goto repair)
 if %edition%==lite goto lite
+rem Pamiętasz może, jak w becie win 8 na tapecie było napisane "Let's don't leak our hard work"?
+rem No tak, to nie ma żadnego związku z tym kodem.
+
 
 :repair
 echo Naprawianie systemu... Zostanie pobrane ok. 200KB danych!
@@ -57,7 +60,7 @@ echo Exit or reboot?
 set /p choose=[reboot/exit]: 
 if %choose%==reboot reboot
 if %choose%==exit goto exit
-
+rem KOMPATYBILNOŚĆ WSTECZNA :FIRE:
 :lite
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/help.bat --silent --output help.bat
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPAIR-SERVER/main/%ver%/info.bat --silent --output info.bat

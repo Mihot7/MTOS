@@ -12,6 +12,7 @@ echo.
 if %boot%==true goto tip
 goto dalej
 :tip
+rem I tak ciula to da, nikt tego nie czyta!
 echo TIP: Pamiętaj aby zainstalować Visual C++ Redistributable!
 echo TIP2: Aby, nie mieć po wyjściu nadal statusu na discordzie użyj polecenia "poweroff".
 :dalej
@@ -39,5 +40,6 @@ echo.
 %shell%
 
 :error
+rem Radek, przepraszam za wszystko, co zrobiłem....
 set errorcode=SHELL_NOT_FOUND
 %error%

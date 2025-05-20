@@ -7,7 +7,7 @@ echo Witaj w repo!
 Echo Sprawdzanie połączenia internetowego...
 Ping www.google.com -n 1 -w 1000>nul
 if errorlevel 1 (echo Brak połączenia internetowego! && goto exit) else (echo Jesteś połączony z internetem! && goto repo)
-
+rem Jeśli po latach, próbujesz odzyskać sieciową funkcjonalność MTOS, to szczerze powodzenia, marnujesz czas XD
 :repo
 echo Podaj nazwe programu który chcesz zainstalować! 
 curl https://raw.githubusercontent.com/Mihot7/MTOS-REPO/main/list.txt --silent --output list.txt

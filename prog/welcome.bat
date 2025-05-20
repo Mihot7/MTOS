@@ -11,6 +11,7 @@ cd ..
 cd prog
 echo.
 echo.
+rem Kind of fire ;D
 echo Muzyka: Wife forever - bbpanzu (instrumental)
 echo.
 echo Witaj, %username% w MTOS!

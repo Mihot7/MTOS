@@ -1,9 +1,10 @@
 @echo off
+chcp 65001
+rem Boże, daj mi siły, aby oczyścić ten kod.
 echo Booting MTOS...
 rem     │     ─   └    ┘    ┌    ┐    ┤    ├    ┼    ┴    ┬
 set kernel=sys
 set shell=MTOS_SHELL
-chcp 65001
 cd system
 call SendKey "{f11}"
 set BOOTING=true
@@ -16,6 +17,7 @@ echo Loading personal settings...
 call "%SYSTEM_FOLDER%\config.bat"
 
 Echo Sprawdzanie połączenia z serwerem aktualizacji...
+type "%SYSTEM_FOLDER%\please_dont_delete_me_im_important.txt"
 Ping www.github.com -n 1 -w 1000>nul
 if errorlevel 1 (echo Brak połączenia z serwerem! && echo error>latestver) else (echo Sprawdzanie najnowszej wersji... && curl https://raw.githubusercontent.com/Mihot7/MTOS/main/config/ver --output latestver --silent)
 set /p latestver=<"latestver"
@@ -42,6 +44,7 @@ if /I %2==/debug set debug=true
 timeout /t 1 /nobreak>nul
 cd plugins
 echo Loading plugins...
+rem daemon free zone xDDDD Chyba, że ktoś serio napisze daemona w batchu. Powodzenia 
 for %%G in (*.bat) do call "%%G" && set /a plugins=plugins+1
 timeout /t 1 /nobreak>nul
 cd ..
@@ -51,6 +54,8 @@ if exist %shell%.bat (
 ) else (
     goto safe_boot
 )
+rem Wiecie co oznacza skrót FNAF?
+rem Five nights of fuckery to get this shit working.
 
 :normal_boot
 cd..
@@ -69,6 +74,7 @@ if errorlevel 1 (echo Brak połączenia internetowego! && goto choosenet1) else 
 :choosenet1
 echo Wybierz czy:
 echo 1. Chcesz zbootować system bez internetu. (może zakończyć sie błędem E01)
+rem Jaki kuźwa błąd E01???? 
 echo 2. Spróbuj ponownie sprawdzić połączenie
 echo 3. Wyłącz system.
 set /p choose=[1,2,3]: 

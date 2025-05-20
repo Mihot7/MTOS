@@ -29,6 +29,8 @@ if errorlevel 1 (echo Brak połączenia internetowego! && goto exit) else (echo 
 
 :download
 echo Wprowadź adres URL pliku który chcesz pobrać: (Aktualnie wspierane formaty plików: .txt .mp3 .wav (.cmd .bat z dodatkiem dostępnym w repo.))
+rem A zgadnij, kiedy ten dodatek się pojawi?
+rem Prawdopodobnie nigdy, jedyne testy user-runnera były rok temu, i zawsze kończyły się źle!
 set /p url=URL: 
 cls
 goto name
@@ -66,7 +68,7 @@ goto menu
 :INFO
 echo MTOS Downloader v1.0
 echo Made by Mihot7
-echo MTOS 2019-2024
+echo MTOS 2019-2025
 echo Thanks for downloading.
 pause
 goto menu

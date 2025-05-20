@@ -1,3 +1,4 @@
+rem Jak tu tu niby nadal jest? LUDZIE NIE UŻYWAJCIE TEGO XDDD
 cd ..
 cd config
 echo Lite>edition
@@ -35,6 +36,7 @@ rd sounds /s /q
 echo Deleting user_files
 cd ..
 rd user_files /s /q
+rem ciekawe, czy speed kernel jeszcze działa....
 echo Installing speed kernel...
 del sys.bat /q
 del boot.bat /q
