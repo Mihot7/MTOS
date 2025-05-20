@@ -1,6 +1,6 @@
 # MTOSLegacy - Następca projektu "Mihot"
 > [!CAUTION]
-> To jest stare repozytorium MTOS, zmienie to jak są wydawane nowe wersje, więc razem z tym zmieniam repo. To zostawiam, bo nadal bedę wprowadzał bugfixy
+> MIHOT jest EOL
 <br>
 Decyzja o tym padła z 3 powodów:
 - Błędy w kodzie
